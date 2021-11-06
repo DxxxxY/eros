@@ -26,21 +26,28 @@
             margin-left: 2.1vw;
         }
         
+        h2 {
+            font-size: 3.5vw;
+            letter-spacing: 0.1vw;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        
         li {
-            font-size: 1.25vw;
-            letter-spacing: 0.25vw;
+            font-size: 1.5vw;
+            letter-spacing: 0.1vw;
             margin: 0 1vw 0;
             padding: 0;
         }
-        
-        .container {
+        /* .container {
             display: flex;
             width: 100%;
             height: 100vh;
             justify-content: flex-start;
             align-items: center;
             flex-direction: column;
-        }
+        } */
         
         nav {
             display: flex;
@@ -60,22 +67,21 @@
         }
         
         p {
-            font-size: 1.25vw;
+            font-size: 1.2vw;
             letter-spacing: 0.25vw;
             padding: 0;
             margin: 0;
         }
         
         section {
-            margin-top: 5vw;
+            margin: 5vw 0 5vw;
             display: flex;
             width: 100%;
-            height: 20vw;
             justify-content: space-around;
         }
         
         .model {
-            background-color: gray;
+            background-color: #000000;
             width: 25vw;
             height: 25vw;
             /* TODO: MAKE MODEL FOLLOW SCROLL IN JS + 3d rotation of shoe*/
@@ -102,7 +108,7 @@
             /* https://www.30secondsofcode.org/css/s/hover-underline-animation */
             content: '';
             position: absolute;
-            width: 96.5%;
+            width: 100%;
             transform: scaleX(0);
             height: 0.15vw;
             bottom: -0.25vw;
@@ -117,60 +123,90 @@
             transform: scaleX(1);
             transform-origin: bottom left;
         }
+        
+        footer {
+            display: flex;
+            width: 100%;
+            height: 7.5vw;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        
+        footer p {
+            white-space: nowrap;
+            margin-right: 2.5vw;
+            font-size: 0.75vw;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <nav>
-            <a href="index.html">
-                <h1>EROS</h1>
-            </a>
-            <ul></ul>
-            <ul>
-                <li><a class="hover-underline-animation" href="index.html">Home</a></li>
-                <li><a class="hover-underline-animation" href="media.html">Media</a></li>
-                <li><a class="hover-underline-animation" href="guides.html">Guides</a></li>
-                <li><a class="hover-underline-animation" href="stores.html">Stores</a></li>
-                <li><a class="hover-underline-animation" href="contact.html">Contact</a></li>
-                <li><a class="hover-underline-animation" href="credits.html">Credits</a></li>
-            </ul>
-        </nav>
-        <section>
-            <div class="wrap">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt id erat id gravida. Nunc mauris quam, cursus non leo pulvinar, iaculis iaculis nisl. Praesent convallis tortor porttitor tempus eleifend. Ut gravida, nunc eget fringilla
-                    euismod, turpis nisi tempus neque, eget scelerisque mauris lorem id nibh. Nunc malesuada, magna sit amet luctus fermentum, purus erat vestibulum nulla, at commodo justo ipsum eu ipsum. Vestibulum ante ipsum primis in faucibus orci
-                    luctus et ultrices posuere cubilia curae; Integer sollicitudin nunc ipsum, id venenatis nibh vestibulum vel. Nam ac nisl orci. Morbi mi lorem, elementum id eleifend ut, tempus nec tortor. Nullam eget ante ipsum. Proin at lectus nibh.
-                    Duis gravida ipsum sed imperdiet ultricies. Cras id mauris eu nisi feugiat sollicitudin non quis leo. Donec sollicitudin leo sapien, ut vehicula lectus vestibulum eget. Nullam ultricies lorem elit, ut fringilla massa maximus eget.
-                    Pellentesque in dictum tortor, quis vulputate ex. Vivamus non nisi vel orci pulvinar posuere. Curabitur tincidunt mollis nulla, fermentum elementum ex gravida a. Fusce tempus pretium magna, eget consectetur neque facilisis eget. Quisque
-                    quis ultrices est, scelerisque aliquet quam. Nullam est ligula, porttitor vitae condimentum in, viverra quis mi. In hac habitasse platea dictumst. Donec nulla dolor, aliquam eget eros a, convallis rutrum turpis. Proin fringilla, mauris
-                    vitae elementum molestie, augue enim mollis massa, vitae tincidunt leo est id velit. Nulla quis turpis eget ligula hendrerit vulputate. Fusce sodales eleifend est quis dictum. In mattis id quam vel consequat. Aenean vestibulum, velit
-                    sed tincidunt fermentum, massa turpis condimentum est, a laoreet dolor urna vitae sapien. Praesent lacus urna, gravida nec enim id, fermentum pharetra nisl. Donec in egestas mi. Donec dapibus sagittis massa nec ornare. Duis pulvinar
-                    nisl at lacus molestie, sed dapibus tellus venenatis. Nulla nec rhoncus tellus, in vehicula ligula. Morbi sed faucibus augue. Nunc molestie porttitor luctus. Cras luctus lectus ac tellus molestie, non rhoncus felis venenatis. Donec
-                    at mi ut arcu molestie bibendum.</p>
-            </div>
-            <div class="model"></div>
-            <div class="wrap">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt id erat id gravida. Nunc mauris quam, cursus non leo pulvinar, iaculis iaculis nisl. Praesent convallis tortor porttitor tempus eleifend. Ut gravida, nunc eget fringilla
-                    euismod, turpis nisi tempus neque, eget scelerisque mauris lorem id nibh. Nunc malesuada, magna sit amet luctus fermentum, purus erat vestibulum nulla, at commodo justo ipsum eu ipsum. Vestibulum ante ipsum primis in faucibus orci
-                    luctus et ultrices posuere cubilia curae; Integer sollicitudin nunc ipsum, id venenatis nibh vestibulum vel. Nam ac nisl orci. Morbi mi lorem, elementum id eleifend ut, tempus nec tortor. Nullam eget ante ipsum. Proin at lectus nibh.
-                    Duis gravida ipsum sed imperdiet ultricies. Cras id mauris eu nisi feugiat sollicitudin non quis leo. Donec sollicitudin leo sapien, ut vehicula lectus vestibulum eget. Nullam ultricies lorem elit, ut fringilla massa maximus eget.
-                    Pellentesque in dictum tortor, quis vulputate ex. Vivamus non nisi vel orci pulvinar posuere. Curabitur tincidunt mollis nulla, fermentum elementum ex gravida a. Fusce tempus pretium magna, eget consectetur neque facilisis eget. Quisque
-                    quis ultrices est, scelerisque aliquet quam. Nullam est ligula, porttitor vitae condimentum in, viverra quis mi. In hac habitasse platea dictumst. Donec nulla dolor, aliquam eget eros a, convallis rutrum turpis. Proin fringilla, mauris
-                    vitae elementum molestie, augue enim mollis massa, vitae tincidunt leo est id velit. Nulla quis turpis eget ligula hendrerit vulputate. Fusce sodales eleifend est quis dictum. In mattis id quam vel consequat. Aenean vestibulum, velit
-                    sed tincidunt fermentum, massa turpis condimentum est, a laoreet dolor urna vitae sapien. Praesent lacus urna, gravida nec enim id, fermentum pharetra nisl. Donec in egestas mi. Donec dapibus sagittis massa nec ornare. Duis pulvinar
-                    nisl at lacus molestie, sed dapibus tellus venenatis. Nulla nec rhoncus tellus, in vehicula ligula. Morbi sed faucibus augue. Nunc molestie porttitor luctus. Cras luctus lectus ac tellus molestie, non rhoncus felis venenatis. Donec
-                    at mi ut arcu molestie bibendum.</p>
-            </div>
-        </section>
-    </div>
+    <!-- <div class="container"> -->
+    <nav>
+        <a href="index.html">
+            <h1>EROS</h1>
+        </a>
+        <ul>
+            <!--placeholder-->
+        </ul>
+        <ul>
+            <li><a class="hover-underline-animation" href="index.html">Home</a></li>
+            <li><a class="hover-underline-animation" href="media.html">Media</a></li>
+            <li><a class="hover-underline-animation" href="guides.html">Guides</a></li>
+            <li><a class="hover-underline-animation" href="stores.html">Stores</a></li>
+            <li><a class="hover-underline-animation" href="contact.html">Contact</a></li>
+            <li><a class="hover-underline-animation" href="credits.html">Credits</a></li>
+        </ul>
+    </nav>
+    <h2>The best shoes.</h2>
+    <section>
+        <div class="wrap">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt id erat id gravida. Nunc mauris quam, cursus non leo pulvinar, iaculis iaculis nisl. Praesent convallis tortor porttitor tempus eleifend. Ut gravida, nunc eget fringilla
+                euismod, turpis nisi tempus neque, eget scelerisque mauris lorem id nibh. Nunc malesuada, magna sit amet luctus fermentum, purus erat vestibulum nulla, at commodo justo ipsum eu ipsum. Vestibulum ante ipsum primis in faucibus orci luctus
+                et ultrices posuere cubilia curae.</p>
+        </div>
+        <div class="model"></div>
+        <div class="wrap">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt id erat id gravida. Nunc mauris quam, cursus non leo pulvinar, iaculis iaculis nisl. Praesent convallis tortor porttitor tempus eleifend. Ut gravida, nunc eget fringilla
+                euismod, turpis nisi tempus neque, eget scelerisque mauris lorem id nibh. Nunc malesuada, magna sit amet luctus fermentum, purus erat vestibulum nulla, at commodo justo ipsum eu ipsum. Vestibulum ante ipsum primis in faucibus orci luctus
+                et ultrices posuere cubilia curae.</p>
+        </div>
+    </section>
+    <section>
+        <div class="wrap">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt id erat id gravida. Nunc mauris quam, cursus non leo pulvinar, iaculis iaculis nisl. Praesent convallis tortor porttitor tempus eleifend. Ut gravida, nunc eget fringilla
+                euismod, turpis nisi tempus neque, eget scelerisque mauris lorem id nibh. Nunc malesuada, magna sit amet luctus fermentum, purus erat vestibulum nulla, at commodo justo ipsum eu ipsum. Vestibulum ante ipsum primis in faucibus orci luctus
+                et ultrices posuere cubilia curae.</p>
+        </div>
+        <div class="model"></div>
+        <div class="wrap">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt id erat id gravida. Nunc mauris quam, cursus non leo pulvinar, iaculis iaculis nisl. Praesent convallis tortor porttitor tempus eleifend. Ut gravida, nunc eget fringilla
+                euismod, turpis nisi tempus neque, eget scelerisque mauris lorem id nibh. Nunc malesuada, magna sit amet luctus fermentum, purus erat vestibulum nulla, at commodo justo ipsum eu ipsum. Vestibulum ante ipsum primis in faucibus orci luctus
+                et ultrices posuere cubilia curae.</p>
+        </div>
+    </section>
+    <h2>Pricing.</h2>
+    <section>
+        <table>
+
+        </table>
+    </section>
+    <footer>
+        <a href="index.html">
+            <h1>EROS</h1>
+        </a>
+        <ul></ul>
+        <p>Copyright &#169; 2021</p>
+    </footer>
+    <!-- </div> -->
+
     <script>
         let dark = true
         let i = 0
         setInterval(() => {
             if (i == 360) i = 0
             document.body.style.backgroundColor = dark ? "#000000" : "#ffffff"
-            document.querySelectorAll("p, a").forEach(e => e.style.color = dark ? "#4a94fa" : "#990099")
+            document.querySelectorAll("p, a, li, h2").forEach(e => e.style.color = dark ? "#4a94fa" : "#990099")
             document.querySelectorAll("h1").forEach(e => {
                 e.style.background = dark ? `linear-gradient(${i}deg, rgba(2, 0, 36, 1) 25%, rgba(2, 0, 36, 1) 50%, #4a94fa 75%, #4a94fa 100%)` : `linear-gradient(${i}deg, rgb(117, 22, 117) 25%, rgb(82, 41, 82) 50%, rgb(75, 23, 75) 75%, rgb(82, 41, 82) 100%)`
                 e.style.webkitBackgroundClip = "text"
