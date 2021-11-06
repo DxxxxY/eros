@@ -137,6 +137,23 @@
             margin-right: 2.5vw;
             font-size: 0.75vw;
         }
+        
+        table {
+            font-size: 1.75vw;
+            letter-spacing: 0.15vw;
+            padding: 0;
+            margin: 0;
+            border: 0.25vw solid #4a94fa;
+        }
+        
+        th {
+            padding: 1vw;
+        }
+        
+        td {
+            font-size: 1vw;
+            padding: 1vw;
+        }
     </style>
 </head>
 
@@ -188,7 +205,30 @@
     <h2>Pricing.</h2>
     <section>
         <table>
-
+            <tr>
+                <th>Model</th>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <th>Length</th>
+                <td>10-25cm</td>
+                <td>20-30cm</td>
+                <td>15-20cm</td>
+            </tr>
+            <tr>
+                <th>Colors</th>
+                <td>Black, White</td>
+                <td>Yellow, Red</td>
+                <td>Blue, Purple</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>499$</td>
+                <td>599$</td>
+                <td>399$</td>
+            </tr>
         </table>
     </section>
     <footer>
@@ -206,7 +246,7 @@
         setInterval(() => {
             if (i == 360) i = 0
             document.body.style.backgroundColor = dark ? "#000000" : "#ffffff"
-            document.querySelectorAll("p, a, li, h2").forEach(e => e.style.color = dark ? "#4a94fa" : "#990099")
+            document.querySelectorAll("p, a, li, h2, table").forEach(e => e.style.color = dark ? "#4a94fa" : "#990099")
             document.querySelectorAll("h1").forEach(e => {
                 e.style.background = dark ? `linear-gradient(${i}deg, rgba(2, 0, 36, 1) 25%, rgba(2, 0, 36, 1) 50%, #4a94fa 75%, #4a94fa 100%)` : `linear-gradient(${i}deg, rgb(117, 22, 117) 25%, rgb(82, 41, 82) 50%, rgb(75, 23, 75) 75%, rgb(82, 41, 82) 100%)`
                 e.style.webkitBackgroundClip = "text"
