@@ -79,7 +79,6 @@ section {
 }
 
 .model {
-    background-color: #000000;
     width: 25vw;
     height: 25vw;
     /* TODO: MAKE MODEL FOLLOW SCROLL IN JS + 3d rotation of shoe*/
@@ -111,7 +110,7 @@ a {
     height: 0.15vw;
     bottom: -0.25vw;
     left: 0;
-    background-color: #4a94fa;
+    background-color: var(--site-color);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -141,7 +140,7 @@ table {
     letter-spacing: 0.15vw;
     padding: 0;
     margin: 0;
-    border: 0.25vw solid #4a94fa;
+    border: 0.25vw solid var(--site-color);
     border-radius: 2px;
 }
 
@@ -157,7 +156,7 @@ td {
 }
 
 form {
-    border: 0.25vw solid #4a94fa;
+    border: 0.25vw solid var(--hover-color);
     border-radius: 2px;
 }
 
@@ -166,7 +165,7 @@ textarea,
 button {
     background-color: #000000;
     font-size: 2vw;
-    border-color: #4a94fa;
+    border-color: var(--hover-color);
     outline: none;
     border-radius: 2px;
 }
