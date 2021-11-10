@@ -7,11 +7,7 @@ function setColor(x) {
         x[i].style.color = dark ? "#4a94fa" : "#990099";
         x[i].style.borderColor = dark ? "#4a94fa" : "#990099";
         x[i].style.backgroundColor = dark ? "#000000" : "#ffffff";
-        if (dark) {
-            x[i].style.setProperty('--site-color', "#4a94fa");
-        } else {
-            x[i].style.setProperty('--site-color', "#990099");
-        }
+        x[i].style.setProperty('--site-color', dark ? "#4a94fa" : "#990099");
     }
 }
 
