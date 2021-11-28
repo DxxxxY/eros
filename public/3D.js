@@ -2,11 +2,6 @@
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.135.0/build/three.module.js"
 import { GLTFLoader } from "../utils/GLTFLoader.js"
 
-//Development (offline)
-if (["localhost", "127.0.0.1", ""].includes(window.location.hostname)) { window.baseurl = "" }
-//Deployment (online)
-else window.baseurl = "/eros/"
-
 //Setup
 const scene = new THREE.Scene()
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
@@ -15,7 +10,7 @@ const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("canva
 renderer.setPixelRatio(window.devicePixelRatio)
 const loader = new GLTFLoader()
 let sneaker
-loader.load("../utils/model/sneaker/scene.gltf", e => {
+loader.load(["localhost", "127.0.0.1", ""].includes(window.location.hostname) ? "../utils/model/sneaker/scene.gltf" : "https://dxxxxy.github.io/eros/utils/model/sneaker/scene.gltf", e => {
     scene.add(e.scene)
     sneaker = e.scene
     sneaker.rotation.set(0, radian(-90), radian(-45))
