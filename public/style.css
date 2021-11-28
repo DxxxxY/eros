@@ -83,9 +83,6 @@ section {
 .model {
     width: 25vw;
     height: 25vw;
-    /* TODO: MAKE MODEL FOLLOW SCROLL IN JS + 3d rotation of shoe*/
-    /* position: sticky;
-    top: 0; */
 }
 
 .wrap {
