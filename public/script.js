@@ -1,11 +1,6 @@
 let dark = true
 let i = 0
 
-//Development (offline)
-if (["localhost", "127.0.0.1", ""].includes(window.location.hostname)) { window.baseurl = "" }
-//Deployment (online)
-else window.baseurl = "/eros/"
-
 //Loop
 setInterval(() => {
     //360deg reset
