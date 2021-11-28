@@ -1,3 +1,15 @@
+//Previous display values
+let previous = new Map()
+
+//Get all value and hide everything
+document.querySelectorAll("nav, section, h2, h1, footer").forEach(e => {
+    previous.set(e.tagName, window.getComputedStyle(e, null).getPropertyValue("display"))
+    e.style.display = "none"
+})
+
+//Show the loader
+document.querySelector("#loader").style.display = "block"
+
 //Imports
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.135.0/build/three.module.js"
 import { GLTFLoader } from "../utils/GLTFLoader.js"
@@ -14,6 +26,14 @@ loader.load(["localhost", "127.0.0.1", ""].includes(window.location.hostname) ? 
     scene.add(e.scene)
     sneaker = e.scene
     sneaker.rotation.set(0, radian(-90), radian(-45))
+        //After loading model, restore displays and hide loader
+    document.querySelectorAll("nav, section, h2, h1, footer").forEach(e => { e.style.display = previous.get(e.tagName) })
+    document.querySelector("#loader").style.display = "none"
+        // Scroll Animation
+    document.body.onscroll = () => {
+        const t = document.body.getBoundingClientRect().top
+        sneaker.rotation.y = radian(-90) + t * 0.01
+    }
 }, null, e => { console.log(e) })
 
 // Torus
@@ -30,12 +50,6 @@ loader.load(["localhost", "127.0.0.1", ""].includes(window.location.hostname) ? 
 
 // Conversion
 const radian = (angle) => angle * (Math.PI / 180)
-
-// Scroll Animation
-document.body.onscroll = () => {
-    const t = document.body.getBoundingClientRect().top
-    sneaker.rotation.y = radian(-90) + t * 0.01
-}
 
 //Canvas animation loop
 const animate = () => {
