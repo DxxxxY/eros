@@ -167,6 +167,7 @@ button {
     border-color: var(--color);
     outline: none;
     border-radius: 2px;
+    border: 0.25vw solid var(--color);
 }
 
 form {
