@@ -116,6 +116,7 @@ a {
 
 .hover-underline-animation:hover:after {
     /* https://www.30secondsofcode.org/css/s/hover-underline-animation */
+    color: var(--color);
     transform: scaleX(1);
     transform-origin: bottom left;
 }
@@ -317,5 +318,24 @@ form {
     transition: filter 0.25s ease-in;
 }
 
-#active { 
+#active {
+    /* https://www.30secondsofcode.org/css/s/hover-underline-animation */
+    display: inline-block;
+    position: relative;
+}
+
+#active:after {
+    /* https://www.30secondsofcode.org/css/s/hover-underline-animation */
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.15vw;
+    bottom: -0.25vw;
+    left: 0;
+    background-color: var(--color);
+}
+
+#active:hover:after {
+    /* https://www.30secondsofcode.org/css/s/hover-underline-animation */
+    transform: scaleX(1);
 }
