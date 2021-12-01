@@ -245,10 +245,11 @@ form {
 }
 
 #media-grid img:hover {
-    filter: blur(3px); 
+    filter: blur(3px);
 }
 
-#media-grid img:hover + .centered, .centered:hover{
+#media-grid img:hover+.centered,
+.centered:hover {
     display: block;
     position: absolute;
     top: 50%;
@@ -266,22 +267,22 @@ form {
     transform: translate(-50%, -50%);
 }
 
-
 .wrap p {
     font-family: "Euclid Circular", sans-serif;
     font-weight: 500;
 }
-  
+
 #guides-container {
     position: relative;
     text-align: center;
 }
 
 #guides-media-grid a:hover {
-    filter: blur(1px); 
+    filter: blur(1px);
 }
 
-#guides-media-grid a:hover + .guides-centered, .guides-centered:hover{
+#guides-media-grid a:hover+.guides-centered,
+.guides-centered:hover {
     display: block;
     position: absolute;
     top: 50%;
@@ -289,7 +290,6 @@ form {
     transform: translate(-50%, -50%);
     background-color: transparent;
     font-size: 1.5vw;
-    
 }
 
 .guides-centered {

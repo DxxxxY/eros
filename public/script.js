@@ -1,20 +1,20 @@
 let dark = true
 let i = 0
 
-// Determine which page is being accessed  
+// Determine which page is being accessed
 var page = window.location.pathname.split("/").pop().split(".html")[0];
 let hover = document.querySelectorAll(".hover-underline-animation")
 
-for (let i=0; i < hover.length; i++) {
+for (let i = 0; i < hover.length; i++) {
     if (page.toLowerCase() == "index") {
-        hover[i].style.color = dark ? "#0d5ca5": "#990099"
+        hover[i].style.color = dark ? "#0d5ca5" : "#990099"
     }
     if (hover[i].textContent.toLowerCase() == page.toLowerCase() || hover[i].textContent.toLowerCase() == "home" && page.toLowerCase() == "index") {
-        hover[i].style.color = dark ? "#4a94fa": "#990099"
+        hover[i].style.color = dark ? "#4a94fa" : "#990099"
         console.log("a")
         hover[i].id = "active"
         hover[i].className = ""
-    } 
+    }
 }
 
 //Loop
