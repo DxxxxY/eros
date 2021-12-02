@@ -4,7 +4,7 @@ let i = 0
 // Determine which page is being accessed
 var page = window.location.pathname.split("/").pop().split(".html")[0];
 
-let mainArray = ["home", "guides", "media", "stores", "contact", "credits"] // Array of the elements that can be highlighted
+let mainArray = ["home", "guides", "media", "stores", "contact", "credits", ""] // Array of the elements that can be highlighted
 
 
 document.querySelectorAll(".hover-underline-animation").forEach( e => {
@@ -15,7 +15,7 @@ document.querySelectorAll(".hover-underline-animation").forEach( e => {
         e.style.color = dark ? "#0d5ca5" : "#990099"
 
         // Make specific element active and not get changed by css
-        if (e.textContent.toLowerCase() == page.toLowerCase() || e.textContent.toLowerCase() == "home" && page.toLowerCase() == "index") {
+        if (e.textContent.toLowerCase() == page.toLowerCase() || e.textContent.toLowerCase() == "home" && page.toLowerCase() == "index" || e.textContent.toLowerCase() == "home" && page.toLowerCase() == "") {
             e.style.color = dark ? "#4a94fa" : "#990099"
             e.id = "active"
             e.className = ""
