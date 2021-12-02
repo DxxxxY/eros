@@ -349,3 +349,14 @@ form {
     text-align: justify;
     max-width: 45vw;
 }
+
+.wrap ul {
+    list-style-type: initial;
+    display: block;
+    width: 35vw;
+}
+
+.wrap li {
+    letter-spacing: normal;
+    text-align: initial;
+}

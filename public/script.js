@@ -23,7 +23,6 @@ document.querySelectorAll(".hover-underline-animation").forEach( e => {
     }
 })
 
-
 document.querySelectorAll(".hover-underline-animation").forEach(e => {
     // Check if element is in array and its not a random link
     if (mainArray.includes(e.textContent.toLowerCase())) {

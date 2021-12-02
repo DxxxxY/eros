@@ -14,25 +14,28 @@ document.querySelector("#loader").style.display = "block"
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.135.0/build/three.module.js"
 import { GLTFLoader } from "../utils/GLTFLoader.js"
 
+// Conversion
+const radian = (angle) => angle * (Math.PI / 180)
+
 //Setup
 const scene = new THREE.Scene()
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
-camera.position.set(0, 0, 0.3)
+camera.position.set(-0.75, -0.5, 4.5)
 const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("canvas") })
 renderer.setPixelRatio(window.devicePixelRatio)
 const loader = new GLTFLoader()
 let sneaker
-loader.load(["localhost", "127.0.0.1", ""].includes(window.location.hostname) ? "../utils/model/sneaker/scene.gltf" : "https://dxxxxy.github.io/eros/utils/model/sneaker/scene.gltf", e => {
+loader.load(["localhost", "127.0.0.1", ""].includes(window.location.hostname) ? "../utils/model/blue_cans/unused_blue_vans_shoe/scene.gltf" : "https://dxxxxy.github.io/eros/utils/model/sneaker/scene.gltf", e => {
     scene.add(e.scene)
     sneaker = e.scene
-    sneaker.rotation.set(0, radian(-90), radian(-45))
+    sneaker.rotation.set(radian(-300), radian(0), radian(0))
         //After loading model, restore displays and hide loader
     document.querySelectorAll("nav, section, h2, h1, footer").forEach(e => { e.style.display = previous.get(e.tagName) })
     document.querySelector("#loader").style.display = "none"
         // Scroll Animation
     document.body.onscroll = () => {
         const t = document.body.getBoundingClientRect().top
-        sneaker.rotation.y = radian(-90) + t * 0.01
+        sneaker.rotation.y = radian(0) + t * 0.01
     }
 }, null, e => { console.log(e) })
 
@@ -43,13 +46,12 @@ loader.load(["localhost", "127.0.0.1", ""].includes(window.location.hostname) ? 
 // scene.add(torus)
 
 // Lights
-// const pointLight = new THREE.PointLight(0xffffff) //0x is #
-// pointLight.position.set(5, 5, 5)
-// const ambientLight = new THREE.AmbientLight(0xffffff) //0x is #
-// scene.add(pointLight, ambientLight)
+const pointLight = new THREE.PointLight(0xffffff) //0x is #
+pointLight.position.set(5, 5, 5)
+const ambientLight = new THREE.AmbientLight(0xffffff) //0x is #
+scene.add(pointLight, ambientLight)
 
-// Conversion
-const radian = (angle) => angle * (Math.PI / 180)
+
 
 //Canvas animation loop
 const animate = () => {
