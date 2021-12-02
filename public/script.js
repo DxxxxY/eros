@@ -17,6 +17,16 @@ for (let i = 0; i < hover.length; i++) {
     }
 }
 
+document.querySelectorAll(".hover-underline-animation").forEach(e => {
+    e.addEventListener('mouseover', function() {
+        e.style.color = dark ? "#4a94fa" : "#990099";
+      });
+    e.addEventListener('mouseleave', function() {
+        e.style.color = dark ? "#0d5ca5" : "#990099";
+    });
+});
+
+
 //Loop
 setInterval(() => {
     //360deg reset
