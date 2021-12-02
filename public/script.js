@@ -3,26 +3,26 @@ let i = 0
 
 // Determine which page is being accessed
 var page = window.location.pathname.split("/").pop().split(".html")[0];
-let hover = document.querySelectorAll(".hover-underline-animation")
 
 let mainArray = ["home", "guides", "media", "stores", "contact", "credits"] // Array of the elements that can be highlighted
 
 
-for (let i = 0; i < hover.length; i++) {
+document.querySelectorAll(".hover-underline-animation").forEach( e => {
     // Check if element is in array and its not a random link
-    if (mainArray.includes(hover[i].textContent.toLowerCase())) {
+    if (mainArray.includes(e.textContent.toLowerCase())) {
 
         // Make element "Not active"
-        hover[i].style.color = dark ? "#0d5ca5" : "#990099"
+        e.style.color = dark ? "#0d5ca5" : "#990099"
 
         // Make specific element active and not get changed by css
-        if (hover[i].textContent.toLowerCase() == page.toLowerCase() || hover[i].textContent.toLowerCase() == "home" && page.toLowerCase() == "index") {
-            hover[i].style.color = dark ? "#4a94fa" : "#990099"
-            hover[i].id = "active"
-            hover[i].className = ""
+        if (e.textContent.toLowerCase() == page.toLowerCase() || e.textContent.toLowerCase() == "home" && page.toLowerCase() == "index") {
+            e.style.color = dark ? "#4a94fa" : "#990099"
+            e.id = "active"
+            e.className = ""
         }
     }
-}
+})
+
 
 document.querySelectorAll(".hover-underline-animation").forEach(e => {
     // Check if element is in array and its not a random link
