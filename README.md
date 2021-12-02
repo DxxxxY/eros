@@ -8,4 +8,3 @@ Cleverly designed page for showcasing shoes.
 - [ ] Create stores page
 - [ ] Reorganize js and css
 - [ ] Color switch button
-- [ ] Make unselected nav elements slightly darker and add hover

@@ -116,6 +116,7 @@ a {
 
 .hover-underline-animation:hover:after {
     /* https://www.30secondsofcode.org/css/s/hover-underline-animation */
+    color: var(--color);
     transform: scaleX(1);
     transform-origin: bottom left;
 }
