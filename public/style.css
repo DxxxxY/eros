@@ -338,3 +338,14 @@ form {
     /* https://www.30secondsofcode.org/css/s/hover-underline-animation */
     transform: scaleX(1);
 }
+
+.guides-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.guide {
+    text-align: justify;
+    max-width: 45vw;
+}
