@@ -359,3 +359,11 @@ form {
     letter-spacing: normal;
     text-align: initial;
 }
+
+#modeSwitch {
+    font-size: 1vw;
+    padding: 0px;
+    margin-top: 0px;
+    background-color: var(--bgColor);
+    margin-right: 2.1vw;
+}
