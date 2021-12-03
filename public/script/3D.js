@@ -12,7 +12,7 @@ document.querySelector("#loader").style.display = "block"
 
 //Imports
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.135.0/build/three.module.js"
-import { GLTFLoader } from "../utils/GLTFLoader.js"
+import { GLTFLoader } from "../../utils/GLTFLoader.js"
 
 // Conversion
 const radian = (angle) => angle * (Math.PI / 180)
@@ -25,7 +25,8 @@ const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("canva
 renderer.setPixelRatio(window.devicePixelRatio)
 const loader = new GLTFLoader()
 let sneaker
-loader.load(["localhost", "127.0.0.1", ""].includes(window.location.hostname) ? "../utils/model/sneaker/scene.gltf" : "https://dxxxxy.github.io/eros/utils/model/sneaker/scene.gltf", e => {    scene.add(e.scene)
+loader.load(["localhost", "127.0.0.1", ""].includes(window.location.hostname) ? "../utils/model/sneaker/scene.gltf" : "https://dxxxxy.github.io/eros/utils/model/sneaker/scene.gltf", e => {
+    scene.add(e.scene)
     sneaker = e.scene
     sneaker.rotation.set(0, radian(-90), radian(-45))
         //After loading model, restore displays and hide loader

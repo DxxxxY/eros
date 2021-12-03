@@ -1,59 +1,48 @@
-
-
 // Dark mode
 let dark = true
-if (localStorage.getItem("current_theme") == "dark") {
-    dark = true
-} else if (localStorage.getItem("current_theme") == "light") {
-    dark = false
-} else {
-    localStorage.setItem("current_theme", dark ? "dark" : "light")
-}
-
-
+if (localStorage.getItem("current_theme") == "light") dark = false
+else localStorage.setItem("current_theme", dark ? "dark" : "light")
 
 let i = 0
 
-// Determine which page is being accessed
-var page = window.location.pathname.split("/").pop().split(".html")[0];
+// Determine which window.location.pathname.split("/").pop().split(".html")[0] is being accessed
 
 // Array of the elements that can be highlighted
-let mainArray = ["home", "guides", "media", "stores", "contact", "credits", ""] 
-let ignoreArrray = [];
-// Set button text
+let mainArray = ["home", "guides", "media", "stores", "contact", "credits", ""]
+let ignoreArrray = ""
 
 document.querySelectorAll(".hover-underline-animation").forEach(e => {
     // Check if element is in array and its not a random link
     if (mainArray.includes(e.textContent.toLowerCase())) {
-        e.addEventListener('mouseover', function() {
+        e.addEventListener("mouseover", function() {
             if (e.id != "active") {
-                e.style.color = dark ? "#4a94fa" : "#990099";
-                ignoreArrray.push(e.innerText)
+                e.style.color = dark ? "#4a94fa" : "#990099"
+                ignoreArrray = e.innerText
             }
-        });
-        e.addEventListener('mouseleave', function() {
+        })
+        e.addEventListener("mouseleave", function() {
             if (e.id != "active") {
-                e.style.color = dark ? "#0d5ca5" : "#990099";
-                ignoreArrray.splice(0, 2)
+                e.style.color = dark ? "#0d5ca5" : "#990099"
+                ignoreArrray = ""
             }
-        });
+        })
     }
-});
+})
 
 //Loop
 setInterval(() => {
     //360deg reset
     if (i == 360) i = 0
 
-    document.querySelectorAll(".hover-underline-animation, #active").forEach( e => {
+    document.querySelectorAll(".hover-underline-animation, #active").forEach(e => {
         // Check if element is in array and its not a random link
         if (mainArray.includes(e.textContent.toLowerCase()) && (!ignoreArrray.includes(e.innerText))) {
-    
+
             // Make element "Not active"
             e.style.color = dark ? "#0d5ca5" : "#600360"
-    
+
             // Make specific element active and not get changed by css
-            if (e.textContent.toLowerCase() == page.toLowerCase() || e.textContent.toLowerCase() == "home" && page.toLowerCase() == "index" || e.textContent.toLowerCase() == "home" && page.toLowerCase() == "") {
+            if (e.textContent.toLowerCase() == window.location.pathname.split("/").pop().split(".html")[0].toLowerCase() || e.textContent.toLowerCase() == "home" && window.location.pathname.split("/").pop().split(".html")[0].toLowerCase() == "index" || e.textContent.toLowerCase() == "home" && window.location.pathname.split("/").pop().split(".html")[0].toLowerCase() == "") {
                 e.style.color = dark ? "#4a94fa" : "#990099"
                 e.id = "active"
                 e.className = ""
@@ -76,14 +65,7 @@ setInterval(() => {
 }, 10)
 
 function darkSwitch() {
-    if (localStorage.getItem("current_theme") == "dark") {
-        localStorage.setItem("current_theme", "light")
-        dark = false
-    } else if (localStorage.getItem("current_theme") == "light") {
-        localStorage.setItem("current_theme", "dark")
-        dark = true
-    } else {
-        localStorage.setItem("current_theme", "dark")
-        dark = true
-    }
+    if (localStorage.getItem("current_theme") == "dark") localStorage.setItem("current_theme", "light")
+    else if (localStorage.getItem("current_theme") == "light") localStorage.setItem("current_theme", "dark")
+    dark = !dark
 }

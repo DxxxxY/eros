@@ -238,6 +238,8 @@ form {
     width: 30vw;
     height: 20vw;
     margin: 0 0.7vw;
+    filter: blur(0px);
+    transition: filter 0.25s ease-in-out;
 }
 
 #container {
@@ -246,7 +248,8 @@ form {
 }
 
 .media-grid img:hover {
-    filter: blur(3px);
+    filter: blur(10px);
+    transition: filter 0.25s ease-in-out;
 }
 
 .media-grid img:hover+.centered,
@@ -277,10 +280,6 @@ form {
     text-align: center;
 }
 
-.guides-media-grid a:hover {
-    filter: blur(1px);
-}
-
 .guides-media-grid a:hover+.guides-centered,
 .guides-centered:hover {
     display: block;
@@ -306,7 +305,7 @@ form {
 }
 
 .guides-media-grid img {
-    filter: grayscale(100%);
+    filter: grayscale(100%) blur(0px);
     width: 45vw;
     height: 25vw;
     margin: 0 1vw;
@@ -315,8 +314,8 @@ form {
 }
 
 .guides-media-grid img:hover {
-    filter: grayscale(0%);
-    transition: filter 0.25s ease-in;
+    filter: grayscale(0%) blur(10px);
+    transition: filter 0.25s ease-in-out;
 }
 
 #active {
