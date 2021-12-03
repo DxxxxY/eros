@@ -2,6 +2,7 @@
     font-family: "Euclid Circular B Bold", sans-serif;
     color: var(--color);
     background-color: var(--bgColor);
+    scroll-behavior: smooth;
 }
 
 body {
