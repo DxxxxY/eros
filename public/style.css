@@ -358,6 +358,7 @@ form {
 .wrap li {
     letter-spacing: normal;
     text-align: initial;
+    font-family: "Euclid Circular B Medium", sans-serif;
 }
 
 #modeSwitch {
