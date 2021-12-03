@@ -228,14 +228,15 @@ form {
     }
 }
 
-#media-grid {
+.media-grid {
+    text-align: center;
     display: flex;
     margin: 15px;
 }
 
-#media-grid img {
-    width: 23vw;
-    height: 18vw;
+.media-grid img {
+    width: 30vw;
+    height: 20vw;
     margin: 0 0.7vw;
 }
 
@@ -244,11 +245,11 @@ form {
     text-align: center;
 }
 
-#media-grid img:hover {
+.media-grid img:hover {
     filter: blur(3px);
 }
 
-#media-grid img:hover+.centered,
+.media-grid img:hover+.centered,
 .centered:hover {
     display: block;
     position: absolute;
@@ -271,16 +272,16 @@ form {
     font-family: "Euclid Circular B Medium", sans-serif;
 }
 
-#guides-container {
+.guides-container {
     position: relative;
     text-align: center;
 }
 
-#guides-media-grid a:hover {
+.guides-media-grid a:hover {
     filter: blur(1px);
 }
 
-#guides-media-grid a:hover+.guides-centered,
+.guides-media-grid a:hover+.guides-centered,
 .guides-centered:hover {
     display: block;
     position: absolute;
@@ -299,19 +300,19 @@ form {
     transform: translate(-50%, -50%);
 }
 
-#guides-media-grid {
+.guides-media-grid {
     display: flex;
     margin: 15px;
 }
 
-#guides-media-grid img {
+.guides-media-grid img {
     filter: grayscale(100%);
-    width: 23vw;
-    height: 18vw;
+    width: 45vw;
+    height: 25vw;
     margin: 0 1vw;
 }
 
-#guides-media-grid img:hover {
+.guides-media-grid img:hover {
     filter: grayscale(0%);
 
 }
@@ -372,4 +373,14 @@ form {
 .canvashover {
     transform: translate(-45vw, 27vw);
     transition: transform ease-in 0.5s;
+}
+
+.video-container {
+    text-align: center;
+    margin-left: 5vw;
+    margin-bottom: 3vw;
+}
+
+.video-container video {
+    width: 60%;
 }
