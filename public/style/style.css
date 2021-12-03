@@ -231,11 +231,11 @@ form {
 .media-grid {
     text-align: center;
     display: flex;
-    margin: 15px;
+    margin: 2vw 5vw 0;
 }
 
 .media-grid img {
-    width: 30vw;
+    width: 28vw;
     height: 20vw;
     margin: 0 0.7vw;
     filter: blur(0px);
@@ -383,7 +383,7 @@ form {
 }
 
 .video-container video {
-    width: 60%;
+    width: 75vw;
 }
 
 #aboutus p {
