@@ -384,3 +384,8 @@ form {
 .video-container video {
     width: 60%;
 }
+
+#aboutus p {
+    overflow-wrap: normal;
+    margin: 0 12vw 0;
+}
