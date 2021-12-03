@@ -390,3 +390,11 @@ form {
     overflow-wrap: normal;
     margin: 0 12vw 0;
 }
+
+dl {
+    line-height: 2vw;
+}
+
+dt {
+    font-size: 1.5vw;
+}
