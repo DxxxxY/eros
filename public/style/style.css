@@ -242,7 +242,7 @@ form {
     transition: filter 0.25s ease-in-out;
 }
 
-#container {
+.media-container {
     position: relative;
     text-align: center;
 }
