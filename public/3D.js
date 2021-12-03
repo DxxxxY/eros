@@ -35,6 +35,12 @@ loader.load(["localhost", "127.0.0.1", ""].includes(window.location.hostname) ? 
     document.body.onscroll = () => {
         const t = document.body.getBoundingClientRect().top
         sneaker.rotation.y = radian(-90) + t * 0.01
+        let value = (t * -100) / window.innerWidth;
+        if (value > 30) {
+            document.querySelector('canvas').className = "canvashover"
+        } else {
+            document.querySelector('canvas').className = ""
+        }
     }
 }, null, e => { console.log(e) })
 

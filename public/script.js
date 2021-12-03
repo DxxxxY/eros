@@ -60,16 +60,6 @@ setInterval(() => {
             }
         }
     })
-    
-    document.body.onscroll = () => {
-        let t = document.body.getBoundingClientRect().top
-        let value = (t * -100) / window.innerWidth;
-        if (value > 30) {
-            document.querySelector('canvas').className = "canvashover"
-        } else {
-            document.querySelector('canvas').className = ""
-        }
-    }
 
     document.getElementById("modeSwitch").innerText = dark ? "Light Mode" : "Dark Mode"
 
