@@ -393,8 +393,13 @@ form {
 
 dl {
     line-height: 2vw;
+
 }
 
+
+dd {
+    font-size: 1vw;
+}
 dt {
     font-size: 1.5vw;
 }
