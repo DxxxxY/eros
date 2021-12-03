@@ -163,7 +163,7 @@ form {
 input,
 textarea,
 button {
-    background-color: #000000;
+    background-color: var(--bgColor);
     font-size: 2vw;
     border-color: var(--color);
     outline: none;
@@ -310,11 +310,13 @@ form {
     width: 45vw;
     height: 25vw;
     margin: 0 1vw;
+    border-radius: 5px;
+    transition: filter 0.25s ease-out;
 }
 
 .guides-media-grid img:hover {
     filter: grayscale(0%);
-
+    transition: filter 0.25s ease-in;
 }
 
 #active {
