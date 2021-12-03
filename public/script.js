@@ -1,3 +1,5 @@
+
+
 // Dark mode
 let dark = true
 if (localStorage.getItem("current_theme") == "dark") {
@@ -59,6 +61,16 @@ setInterval(() => {
         }
     })
     
+    document.body.onscroll = () => {
+        let t = document.body.getBoundingClientRect().top
+        let value = (t * -100) / window.innerWidth;
+        if (value > 30) {
+            document.querySelector('canvas').className = "canvashover"
+        } else {
+            document.querySelector('canvas').className = ""
+        }
+    }
+
     document.getElementById("modeSwitch").innerText = dark ? "Light Mode" : "Dark Mode"
 
     // Apply site wide color scheme
@@ -72,28 +84,6 @@ setInterval(() => {
     })
     i++
 }, 10)
-
-
-// idk how to comment this, uhhhh
-let first_run = true
-let observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        const canvas = entry.target.querySelector('canvas');
-
-        if (!entry.isIntersecting) {
-
-          if (!first_run) {
-            canvas.classList.add('canvashover');
-          } else {
-               first_run = false
-           }
-        } else {
-            canvas.classList.remove('canvashover');
-        }
-      });
-});
-
-observer.observe(document.querySelectorAll('.model')[0]);
 
 function darkSwitch() {
     if (localStorage.getItem("current_theme") == "dark") {
