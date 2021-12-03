@@ -367,3 +367,12 @@ form {
     background-color: var(--bgColor);
     margin-right: 2.1vw;
 }
+
+.canvashover {
+    transform: translate(-45vw, 27vw);
+    transition: transform ease-in 0.5s;
+}
+
+#section2 {
+    margin-top: 10vw;
+}

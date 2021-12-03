@@ -45,7 +45,6 @@ setInterval(() => {
 
     document.querySelectorAll(".hover-underline-animation, #active").forEach( e => {
         // Check if element is in array and its not a random link
-        console.log(ignoreArrray)
         if (mainArray.includes(e.textContent.toLowerCase()) && (!ignoreArrray.includes(e.innerText))) {
     
             // Make element "Not active"
@@ -53,7 +52,6 @@ setInterval(() => {
     
             // Make specific element active and not get changed by css
             if (e.textContent.toLowerCase() == page.toLowerCase() || e.textContent.toLowerCase() == "home" && page.toLowerCase() == "index" || e.textContent.toLowerCase() == "home" && page.toLowerCase() == "") {
-                console.log("changed")
                 e.style.color = dark ? "#4a94fa" : "#990099"
                 e.id = "active"
                 e.className = ""
@@ -75,6 +73,27 @@ setInterval(() => {
     i++
 }, 10)
 
+
+// idk how to comment this, uhhhh
+let first_run = true
+let observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        const canvas = entry.target.querySelector('canvas');
+
+        if (!entry.isIntersecting) {
+
+          if (!first_run) {
+            canvas.classList.add('canvashover');
+          } else {
+               first_run = false
+           }
+        } else {
+            canvas.classList.remove('canvashover');
+        }
+      });
+});
+
+observer.observe(document.querySelectorAll('.model')[0]);
 
 function darkSwitch() {
     if (localStorage.getItem("current_theme") == "dark") {
