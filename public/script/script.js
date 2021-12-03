@@ -5,8 +5,6 @@ else localStorage.setItem("current_theme", dark ? "dark" : "light")
 
 let i = 0
 
-// Determine which window.location.pathname.split("/").pop().split(".html")[0] is being accessed
-
 // Array of the elements that can be highlighted
 let mainArray = ["home", "guides", "media", "stores", "contact", "credits", ""]
 let ignoreArrray = ""
