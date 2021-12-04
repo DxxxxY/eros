@@ -1,1 +1,21 @@
-blah blah blah
+Serhiy: 
+ - Spinning Model for main page
+ - Table for main page
+ - Main page design
+ - Nav bar (Underline animation and nav bar design)
+ - Logo
+ - Credits page (Design, Table)
+ - Contact page (Design, Form)
+ - Light mode dark mode
+ - A lot of code cleanup
+
+ Thomas:
+ - Media page
+ - Guides page 
+ - Stores page
+ - Translation for model in main page
+ - Main page content (Welcome to eros... Features...)
+ - Light mode, dark mode (localstorage, button, function)
+ - Nav bar (Active elements, Highlighted elements)
+ - Contact page (FAQ)
+ - Credits page (About us)
