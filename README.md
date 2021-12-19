@@ -1,2 +1,2 @@
 # eros
-Cleverly designed page for showcasing shoes.
+Final team project (teammate: [@SuperBluw](https://github.com/SuperBluw)) of the first semester of programming. `420-120-DW WEB DEVELOPMENT I`. Cleverly designed page for showcasing shoes. If not for the project's numerous requirements, we would've gone more minimal and simplistic. Utilizes three.js for models.
